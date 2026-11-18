@@ -1,7 +1,7 @@
 {
   "name": "yuvaraj-ramya-wedding",
   "version": "1.0.0",
-  "description": "Wedding Invitation for A Yuvaraj & J Ramya",
+  "description": "Wedding Invitation for Yuvaraj & Ramya",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
