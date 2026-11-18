@@ -841,12 +841,11 @@
     const D = W.date, V = W.venue;
     document.getElementById('app').innerHTML = `
 <section id="hero">
-  <div class="arch seq" style="--i:0"><img src="${PHOTOS.b}" alt="Yuvaraj and Ramya" decoding="async"></div>
-  <h1 class="names"><span class="seq" style="--i:1;display:block">${W.groomFirst}</span><span class="amp seq" style="--i:2">&amp;</span><span class="seq" style="--i:3;display:block">${W.brideFirst}</span></h1>
-  <div class="date seq" style="--i:4">${D.full}</div>
-  <div class="day seq" style="--i:4">${D.day}</div>
-  <p class="tag seq" style="--i:5">${W.tagline}</p>
-  <a class="btn seq" style="--i:6" href="#intro">Open Invitation</a>
+  <h1 class="names"><span class="seq" style="--i:0;display:block">${W.groomFirst}</span><span class="amp seq" style="--i:1">&amp;</span><span class="seq" style="--i:2;display:block">${W.brideFirst}</span></h1>
+  <div class="date seq" style="--i:3">${D.full}</div>
+  <div class="day seq" style="--i:3">${D.day}</div>
+  <p class="tag seq" style="--i:4">${W.tagline}</p>
+  <a class="btn seq" style="--i:5" href="#intro">Open Invitation</a>
 </section>
 
 <section id="intro">
