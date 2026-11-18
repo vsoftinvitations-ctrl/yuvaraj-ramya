@@ -819,7 +819,7 @@
       short: "Yuvaraj & Ramya",
       date: { full: "29 November 2026", day: "Sunday", num: "29", month: "November 2026", dots: "29 • 11 • 2026", dotted: "29.11.2026" },
       time: "7:30 AM – 9:00 AM",
-      reception: { date: "28 November 2026", day: "Saturday", time: "Start from 6:30 PM" },
+      reception: { date: "28 November 2026", day: "Saturday", time: "Starts from 6:30 PM" },
       venue: { name: "Madura Mahal", place: "R.S. Road, Gudiyattam", map: "https://maps.google.com/?q=Madura%20Mahal%2C%20Gudiyatham%2C%20Tamil%20Nadu%20632602" },
       tagline: "A celebration of love, family & togetherness",
       quotes: ["Our love began as a story, and today we make a promise to turn it into forever.", "A beautiful marriage is not something you find, it is something you build together."],
@@ -879,7 +879,15 @@
   </div>
 </section>
 
-<section class="alt"><div class="wrap">
+${W.reception ? `<section class="alt"><div class="wrap">
+  <p class="label r">Reception</p>
+  <div class="serif r" style="font-size:clamp(1.8rem,5.5vw,2.4rem)">${W.reception.date || W.reception}</div>
+  ${W.reception.day ? `<div class="day r" style="margin-top:8px">${W.reception.day}</div>` : ""}
+  <div class="rule line-x r"></div>
+  <div class="time r" style="font-size:1.25rem">${W.reception.time || ""}</div>
+</div></section>` : ""}
+
+<section><div class="wrap">
   <p class="label r">The wedding day</p>
   <div class="daynum r">${D.num}</div>
   <div class="month r">${D.month.toUpperCase()}</div>
@@ -889,21 +897,13 @@
   ${D.sub ? `<div class="small r" style="margin-top:6px">${D.sub}</div>` : ""}
 </div></section>
 
-<section><div class="wrap">
+<section class="alt"><div class="wrap">
   <p class="label r">The venue</p>
   <div class="r"><a href="${V.map}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none" aria-label="Open Google Maps">${pin}</a></div>
   <h2 class="big r"><a href="${V.map}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${V.name}</a></h2>
   <p class="small r" style="margin-top:10px;font-size:1rem"><a href="${V.map}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${V.place}</a></p>
   <div class="r" style="margin-top:28px"><a class="btn" href="${V.map}" target="_blank" rel="noopener">View on Google Maps</a></div>
 </div></section>
-
-${W.reception ? `<section class="alt"><div class="wrap">
-  <p class="label r">Reception</p>
-  <div class="serif r" style="font-size:clamp(1.8rem,5.5vw,2.4rem)">${W.reception.date || W.reception}</div>
-  ${W.reception.day ? `<div class="day r" style="margin-top:8px">${W.reception.day}</div>` : ""}
-  <div class="rule line-x r"></div>
-  <div class="time r" style="font-size:1.25rem">${W.reception.time || ""}</div>
-</div></section>` : ""}
 
 <section><div class="wrap">
   ${orn}
