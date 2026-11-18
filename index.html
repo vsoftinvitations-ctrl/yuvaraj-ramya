@@ -819,14 +819,14 @@
       short: "Yuvaraj & Ramya",
       date: { full: "29 November 2026", day: "Sunday", num: "29", month: "November 2026", dots: "29 • 11 • 2026", dotted: "29.11.2026" },
       time: "7:30 AM – 9:00 AM",
-      reception: "", notice: "",
+      reception: { date: "28 November 2026", day: "Saturday", time: "Start from 6:30 PM" },
       venue: { name: "Madura Mahal", place: "R.S. Road, Gudiyattam", map: "https://maps.google.com/?q=Madura%20Mahal%2C%20Gudiyatham%2C%20Tamil%20Nadu%20632602" },
       tagline: "A celebration of love, family & togetherness",
       quotes: ["Our love began as a story, and today we make a promise to turn it into forever.", "A beautiful marriage is not something you find, it is something you build together."],
       invite: "We cordially invite your gracious presence and blessings on the auspicious occasion of the wedding ceremony of Yuvaraj and Ramya.",
       families: [
-        { title: "Groom's Family", names: "Arul & Jayanthi", lines: ["Father: Arul", "Mother: Jayanthi"] },
-        { title: "Bride's Family", names: "Jagadeesan & Maheshwari", lines: ["Father: Jagadeesan", "Mother: Maheshwari"] }
+        { title: "Groom's Family", names: "Arul & Jayanthi", lines: [] },
+        { title: "Bride's Family", names: "Jagadeesan & Mageswari", lines: [] }
       ],
       compliments: ["Family & Friends", "Near & Dear"]
     };
@@ -899,8 +899,10 @@
 
 ${W.reception ? `<section class="alt"><div class="wrap">
   <p class="label r">Reception</p>
-  <h2 class="big r" style="font-size:clamp(1.9rem,6vw,2.6rem)">${W.reception}</h2>
-  ${W.notice ? `<div class="rule line-x r"></div><p class="note r">${W.notice}</p>` : ""}
+  <div class="serif r" style="font-size:clamp(1.8rem,5.5vw,2.4rem)">${W.reception.date || W.reception}</div>
+  ${W.reception.day ? `<div class="day r" style="margin-top:8px">${W.reception.day}</div>` : ""}
+  <div class="rule line-x r"></div>
+  <div class="time r" style="font-size:1.25rem">${W.reception.time || ""}</div>
 </div></section>` : ""}
 
 <section><div class="wrap">
@@ -943,7 +945,7 @@ ${W.reception ? `<section class="alt"><div class="wrap">
       return `<div class="r">
   <p class="label">${f.title}</p>
   <h3>${f.names}</h3>
-  <p>${f.lines.join('<br>')}</p>
+  ${f.lines && f.lines.length ? `<p style="margin-top:8px">${f.lines.join('<br>')}</p>` : ''}
 </div>` }
     document.getElementById('fmono').textContent = W.footMono;
     document.getElementById('fdate').textContent = D.dotted;

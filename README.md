@@ -5,15 +5,14 @@ Digital wedding invitation web application for the wedding of **Yuvaraj & Ramya*
 ### Wedding Details
 - **Groom:** Yuvaraj
 - **Bride:** Ramya
-- **Date:** 29 November 2026
-- **Day:** Sunday
-- **Time:** 7:30 AM – 9:00 AM
+- **Reception:** 28 November 2026, Saturday (Start from 6:30 PM)
+- **Wedding Ceremony (Muhurtham):** 29 November 2026, Sunday (7:30 AM – 9:00 AM)
 - **Venue:** [Madura Mahal](https://maps.google.com/?q=Madura%20Mahal%2C%20Gudiyatham%2C%20Tamil%20Nadu%20632602)
 - **Address:** R.S. Road, Gudiyattam
 
 ### Families
-- **Groom's Family:** Arul (Father) & Jayanthi (Mother)
-- **Bride's Family:** Jagadeesan (Father) & Maheshwari (Mother)
+- **Groom's Family:** Arul & Jayanthi
+- **Bride's Family:** Jagadeesan & Mageswari
 
 ---
 
